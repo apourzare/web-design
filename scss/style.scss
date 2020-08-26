@@ -1,0 +1,73 @@
+@import "./reset";
+@import "./layouts";
+@import "./variables";
+@import "./components/navbar";
+@import "./components/button";
+
+@each $key, $val in $colors {
+    .bg-#{$key} {
+        background-color: $val !important;
+    }
+}
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val !important;
+    }
+}
+
+@each $key, $val in $colors {
+    .border-#{$key} {
+        border-color: $val !important;
+    }
+}
+
+@each $key1, $val1 in $space {
+    .p-#{$key1} {
+        padding: $val1 !important;
+    }
+
+    .px-#{$key1} {
+        padding-left: $val1 !important;
+        padding-right: $val1 !important;
+    }
+
+    .py-#{$key1} {
+        padding-top: $val1 !important;
+        padding-bottom: $val1 !important;
+    }
+
+    @each $key2, $val2 in $space-arrow {
+        .p#{$key2}-#{$key1} {
+            padding-#{$val2}: $val1 !important;
+        }
+    }
+}
+
+@each $key1, $val1 in $space {
+    .m-#{$key1} {
+        margin: $val1 !important;
+    }
+
+    .mx-#{$key1} {
+        margin-left: $val1 !important;
+        margin-right: $val1 !important;
+    }
+
+    .my-#{$key1} {
+        margin-top: $val1 !important;
+        margin-bottom: $val1 !important;
+    }
+
+    @each $key2, $val2 in $space-arrow {
+        .m#{$key2}-#{$key1} {
+            margin-#{$val2}: $val1 !important;
+        }
+    }
+}
+
+.border {
+    border: 1px solid #eeeeee;
+    // margin: 2px;
+    background-color: #8d9cf0;
+}

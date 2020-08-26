@@ -1,0 +1,37 @@
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+
+$colors : (
+    'primary': #007bff, 
+    'secondary': #6c757d, 
+    'success': #28a745, 
+    'danger': #dc3545, 
+    'warning': #ffc107, 
+    'info': #17a2b8, 
+    'light': #f8f9fa, 
+    'dark': #343a40, 
+    'white': #ffffff, 
+);
+
+$space : (
+    "0": 0,
+    "1": 0.25rem,
+    "2": 0.5rem,
+    "3": 0.75rem,
+    "4": 1.0rem,
+    "5": 1.25rem,
+);
+
+$space-arrow : (
+    "t": top,
+    'b': bottom,
+    'l': left,
+    'r': right,
+);

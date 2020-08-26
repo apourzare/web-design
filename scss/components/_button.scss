@@ -1,0 +1,30 @@
+@import './../variables';
+.btn {
+    padding: 10px 17px;
+    border: 1px solid #5f5f5f;
+    border-radius: 4px;
+    color: $white;
+    font-weight: 600;
+    text-align: center;
+    margin: .25rem 0;
+}
+
+@each $key, $val in $colors {
+    .btn-#{$key} {
+        background-color: rgba($color: $val, $alpha: 0.9) !important;
+        border-color: rgba($color: $val, $alpha: 0.9) !important;
+        &:hover {
+            background-color: rgba($color: $val, $alpha: 1) !important;
+            border-color: rgba($color: $val, $alpha: 1) !important;
+            cursor: pointer;
+        }
+    }
+}
+
+.btn-white, .btn-light {
+    color: $dark !important;
+    border-color: rgba($color: $dark, $alpha: 0.1) !important;
+    &:hover {
+        border-color: rgba($color: $dark, $alpha: 0.2) !important;
+    }
+}

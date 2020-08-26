@@ -1,0 +1,34 @@
+@import './../variables';
+
+.navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    & a.barnd {
+        font-size: 2rem;
+        padding: 1rem 1.25rem;
+    } 
+
+    &-nav {
+        display: flex !important;
+        & .nav {
+            &-item {
+                padding: .75rem 1.3rem;
+                &:hover {
+                    & .nav-link {
+                        color: $white !important;
+                    }
+                }
+            }
+
+            &-link {
+                color: $warning !important;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

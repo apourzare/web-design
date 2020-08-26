@@ -1,0 +1,142 @@
+.d-flex {
+    display: flex !important;
+}
+
+.flex {
+    &-row {
+        flex-direction: row !important;
+        &-reverse {
+            flex-direction: row-reverse !important;
+        }
+    }
+    &-column {
+        flex-direction: column !important;
+        &-reverse {
+            flex-direction: column-reverse !important;
+        }
+    }
+}
+
+.justify-content {
+    &-start {
+        justify-content: flex-start !important;
+    }
+
+    &-end {
+        justify-content: flex-end !important;
+    }
+
+    &-center {
+        justify-content: center !important;
+    }
+
+    &-between {
+        justify-content: space-between !important;
+    }
+
+    &-around {
+        justify-content: space-around !important;
+    }
+}
+
+.align-items {
+    &-start {
+        align-items: flex-start !important;
+    }
+    &-end {
+        align-items: flex-end !important;
+    }
+    &-center {
+        align-items: center !important;
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+$col-size: (
+    "1" : (1/12)*100,
+    "2" : (2/12)*100,
+    "3" : (3/12)*100,
+    "4" : (4/12)*100,
+    "5" : (5/12)*100,
+    "6" : (6/12)*100,
+    "7" : (7/12)*100,
+    "8" : (8/12)*100,
+    "9" : (9/12)*100,
+    "10" : (10/12)*100,
+    "11" : (11/12)*100,
+    "12" : (12/12)*100,
+);
+.col {
+    width: 100% !important;
+    padding: 0 .125rem !important;
+}
+
+@each $key, $val in $col-size {
+    .col-#{$key} {
+        width: #{$val}% !important;
+        padding: 0 .125rem !important;
+    }
+}
+
+// sm device
+@media (min-width: 576px) {
+    .col-sm {
+        width: 100% !important;
+        padding: 0 .25rem !important;
+    }
+    
+    @each $key, $val in $col-size {
+        .col-sm-#{$key} {
+            width: #{$val}% !important;
+            padding: 0 .25rem !important;
+        }
+    }
+}
+
+// md device
+@media (min-width: 768px) {
+    .col-md {
+        width: 100% !important;
+        padding: 0 .5rem !important;
+    }
+    
+    @each $key, $val in $col-size {
+        .col-md-#{$key} {
+            width: #{$val}% !important;
+            padding: 0 .5rem !important;
+        }
+    }
+}
+
+// lg device
+@media (min-width: 992px) {
+    .col-lg {
+        width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    
+    @each $key, $val in $col-size {
+        .col-lg-#{$key} {
+            width: #{$val}% !important;
+            padding: 0 1rem !important;
+        }
+    }
+}
+
+// xl device
+@media (min-width: 1200px) {
+    .col-xl {
+        width: 100% !important;
+        padding: 0 1.25rem !important;
+    }
+    
+    @each $key, $val in $col-size {
+        .col-xl-#{$key} {
+            width: #{$val}% !important;
+            padding: 0 1.25rem !important;
+        }
+    }
+}
